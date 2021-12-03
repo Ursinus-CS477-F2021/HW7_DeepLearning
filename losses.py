@@ -54,8 +54,9 @@ def logistic_est_loss_deriv(y_est, y):
     
     Returns
     -------
-    ndarray(N):
-        Derivative of logistic loss over all samples
+    float:
+        Derivative of logistic loss with respect to input
+        *u* to logistic function
     """
     return y_est-y
 
