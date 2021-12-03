@@ -44,8 +44,10 @@ def leaky_relu(u):
     -------
     ndarray(N): Leaky ReLU outputs
     """
-    ## TODO: Return an array with the leaky ReLU at every input
-    return 0*u ## TODO: This is a dummy value
+    res = np.zeros_like(u)
+    res[u > 0] = u[u > 0]
+    ## TODO: Finish this
+    return res 
 
 def leaky_relu_deriv(u):
     """
@@ -60,8 +62,9 @@ def leaky_relu_deriv(u):
     -------
     ndarray(N): Derivatives of Leaky ReLU at these inputs
     """
-    ## TODO: Return an array with derivative of the leaky ReLU at every input
-    return 0*u ## TODO: This is a dummy value
+    res = np.zeros_like(u)
+    ## TODO: Finish this
+    return res ## TODO: This is a dummy value
 
 def softmax(u):
     """
