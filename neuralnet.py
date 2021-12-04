@@ -2,24 +2,6 @@ import numpy as np
 from losses import *
 from layers import *
 
-def outer_product(a, b):
-    """
-    Perform the outer product of two vectors, treating
-    the first as a column matrix and the second as a
-    row matrix
-
-    a: ndarray
-        The first vector
-    b: ndarray
-        The second vector
-    """
-    # Cast them as numpy arrays and flatten them to be safe
-    a = np.array(a).flatten() 
-    b = np.array(b).flatten()
-    a = np.reshape(a, (a.size, 1))
-    bT = np.reshape(b, (1, b.size))
-    return a.dot(bT)
-
 class NeuralNet:
     """
     A class for learning with fully connected neural networks
